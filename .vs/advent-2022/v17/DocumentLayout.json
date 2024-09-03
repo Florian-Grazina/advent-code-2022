@@ -1,10 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\fgrazina\\Source\\repos\\Florian-Grazina\\advent-2022\\",
+  "WorkspaceRootPath": "C:\\Users\\fgrazina.PPI\\Source\\repos\\Florian-Grazina\\advent-2022\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{58604ABB-1E83-4728-815E-6A8E4EF46DF4}|01\\01.csproj|c:\\users\\fgrazina\\source\\repos\\florian-grazina\\advent-2022\\01\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58604ABB-1E83-4728-815E-6A8E4EF46DF4}|01\\01.csproj|solutionrelative:01\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{78C1D7F8-2D8C-46FE-9220-345A2013A7B0}|05\\05.csproj|c:\\users\\fgrazina.ppi\\source\\repos\\florian-grazina\\advent-2022\\05\\input.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{78C1D7F8-2D8C-46FE-9220-345A2013A7B0}|05\\05.csproj|solutionrelative:05\\input.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78C1D7F8-2D8C-46FE-9220-345A2013A7B0}|05\\05.csproj|c:\\users\\fgrazina.ppi\\source\\repos\\florian-grazina\\advent-2022\\05\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78C1D7F8-2D8C-46FE-9220-345A2013A7B0}|05\\05.csproj|solutionrelative:05\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78C1D7F8-2D8C-46FE-9220-345A2013A7B0}|05\\05.csproj|c:\\users\\fgrazina.ppi\\source\\repos\\florian-grazina\\advent-2022\\05\\stacksofcrates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78C1D7F8-2D8C-46FE-9220-345A2013A7B0}|05\\05.csproj|solutionrelative:05\\stacksofcrates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78C1D7F8-2D8C-46FE-9220-345A2013A7B0}|05\\05.csproj|c:\\users\\fgrazina.ppi\\source\\repos\\florian-grazina\\advent-2022\\05\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78C1D7F8-2D8C-46FE-9220-345A2013A7B0}|05\\05.csproj|solutionrelative:05\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +26,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
@@ -25,16 +41,66 @@
               "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\fgrazina\\Source\\repos\\Florian-Grazina\\advent-2022\\01\\Program.cs",
-              "RelativeDocumentMoniker": "01\\Program.cs",
-              "ToolTip": "C:\\Users\\fgrazina\\Source\\repos\\Florian-Grazina\\advent-2022\\01\\Program.cs",
-              "RelativeToolTip": "01\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "input.txt",
+              "DocumentMoniker": "C:\\Users\\fgrazina.PPI\\Source\\repos\\Florian-Grazina\\advent-2022\\05\\input.txt",
+              "RelativeDocumentMoniker": "05\\input.txt",
+              "ToolTip": "C:\\Users\\fgrazina.PPI\\Source\\repos\\Florian-Grazina\\advent-2022\\05\\input.txt",
+              "RelativeToolTip": "05\\input.txt",
+              "ViewState": "AQIAANgBAAAAAAAAAAAwwOoBAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-09-02T16:15:04.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StacksOfCrates.cs",
+              "DocumentMoniker": "C:\\Users\\fgrazina.PPI\\Source\\repos\\Florian-Grazina\\advent-2022\\05\\StacksOfCrates.cs",
+              "RelativeDocumentMoniker": "05\\StacksOfCrates.cs",
+              "ToolTip": "C:\\Users\\fgrazina.PPI\\Source\\repos\\Florian-Grazina\\advent-2022\\05\\StacksOfCrates.cs",
+              "RelativeToolTip": "05\\StacksOfCrates.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAswCwAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-12T15:09:00.062Z",
+              "WhenOpened": "2024-09-02T15:59:50.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\fgrazina.PPI\\Source\\repos\\Florian-Grazina\\advent-2022\\05\\Order.cs",
+              "RelativeDocumentMoniker": "05\\Order.cs",
+              "ToolTip": "C:\\Users\\fgrazina.PPI\\Source\\repos\\Florian-Grazina\\advent-2022\\05\\Order.cs",
+              "RelativeToolTip": "05\\Order.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAA1wAIAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T15:29:39.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\fgrazina.PPI\\Source\\repos\\Florian-Grazina\\advent-2022\\05\\Program.cs",
+              "RelativeDocumentMoniker": "05\\Program.cs",
+              "ToolTip": "C:\\Users\\fgrazina.PPI\\Source\\repos\\Florian-Grazina\\advent-2022\\05\\Program.cs",
+              "RelativeToolTip": "05\\Program.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAEwCUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T15:27:48.546Z",
               "EditorCaption": ""
             }
           ]

@@ -21,7 +21,7 @@ namespace _05
 
         public void AddCrate(int index, char item)
         {
-            if(item == '0')
+            if (item == '0')
                 return;
 
             Stacks[index].Push(item.ToString());
@@ -34,9 +34,18 @@ namespace _05
 
         public void ApplyOrder(Order order)
         {
-            for(int i = 0; i < order.NbOfCratesToMove; i++)
+            List<string> crates = [];
+
+            for (int i = 0; i < order.NbOfCratesToMove; i++)
             {
                 string crate = RemoveCreate(order.FromIndex);
+                crates.Add(crate);
+            }
+
+            crates.Reverse();
+
+            foreach (string crate in crates)
+            {
                 Stacks[order.ToIndex].Push(crate);
             }
         }
