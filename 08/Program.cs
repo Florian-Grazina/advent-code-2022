@@ -11,3 +11,4 @@ map.Populate(input);
 map.Print();
 
 int result = map.GetNumberOfVisibleTrees();
+Console.WriteLine(result);

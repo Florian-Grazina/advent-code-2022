@@ -20,10 +20,10 @@ namespace _08
         {
             int y = 0;
 
-            foreach(string line in input)
+            foreach (string line in input)
             {
                 int x = 0;
-                foreach(char c in line)
+                foreach (char c in line)
                 {
                     int height = int.Parse(c.ToString());
                     map[x, y] = new Tree(height, x, y);
@@ -35,9 +35,9 @@ namespace _08
 
         public void Print()
         {
-            for(int y = 0; y < YEdge; y++)
+            for (int y = 0; y < YEdge; y++)
             {
-                for(int x = 0; x < XEdge; x++)
+                for (int x = 0; x < XEdge; x++)
                 {
                     Console.Write(map[x, y].Height);
                 }
@@ -47,11 +47,13 @@ namespace _08
 
         public bool IsTreeVisible(Tree tree)
         {
-            if(tree.X == 0 || tree.X == XEdge || tree.Y == 0 || tree.Y == YEdge)
+            if (tree.X == 0 || tree.X == XEdge - 1 || tree.Y == 0 || tree.Y == YEdge - 1)
                 return true;
 
-            else if(VisibleOnX(tree) || VisibleOnY(tree))
+            else if (VisibleOnX(tree) || VisibleOnY(tree))
+            {
                 return true;
+            }
 
             return false;
         }
@@ -64,7 +66,7 @@ namespace _08
             {
                 for (int x = 0; x < XEdge; x++)
                 {
-                    if(IsTreeVisible(map[x, y]))
+                    if (IsTreeVisible(map[x, y]))
                         result++;
                 }
             }
@@ -76,21 +78,25 @@ namespace _08
         {
             bool isVisible = true;
 
-            for(int x = tree.X; x > 0; x--)
+            for (int x = tree.X - 1; x >= 0; x--)
             {
-                if(map[x, tree.Y].Height >= tree.Height)
+                int heightToTest = map[x, tree.Y].Height;
+                if (heightToTest >= tree.Height)
                 {
                     isVisible = false;
                     break;
                 }
             }
 
-            if(isVisible)
+            if (isVisible)
                 return isVisible;
 
-            for (int x = tree.X; x < XEdge; x++)
+            isVisible = true;
+
+            for (int x = tree.X + 1; x < XEdge; x++)
             {
-                if (map[x, tree.Y].Height >= tree.Height)
+                int heightToTest = map[x, tree.Y].Height;
+                if (heightToTest >= tree.Height)
                 {
                     isVisible = false;
                     break;
@@ -104,9 +110,10 @@ namespace _08
         {
             bool isVisible = true;
 
-            for (int y = tree.Y; y > 0; y--)
+            for (int y = tree.Y - 1; y >= 0; y--)
             {
-                if (map[tree.X, y].Height >= tree.Height)
+                int heightToTest = map[tree.X, y].Height;
+                if (heightToTest >= tree.Height)
                 {
                     isVisible = false;
                     break;
@@ -116,9 +123,12 @@ namespace _08
             if (isVisible)
                 return isVisible;
 
-            for (int y = tree.Y; y < YEdge; y++)
+            isVisible = true;
+
+            for (int y = tree.Y + 1; y < YEdge; y++)
             {
-                if (map[tree.X, y].Height >= tree.Height)
+                int heightToTest = map[tree.X, y].Height;
+                if (heightToTest >= tree.Height)
                 {
                     isVisible = false;
                     break;
