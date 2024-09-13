@@ -45,17 +45,17 @@ namespace _08
             }
         }
 
-        public bool IsTreeVisible(Tree tree)
+        public int GetScore(Tree tree)
         {
             if (tree.X == 0 || tree.X == XEdge - 1 || tree.Y == 0 || tree.Y == YEdge - 1)
-                return true;
+                return 0;
 
-            else if (VisibleOnX(tree) || VisibleOnY(tree))
-            {
-                return true;
-            }
+            int topTrees = VisibleTreesTop(tree);
+            int botTrees = VisibleTreesBot(tree);
+            int rightTrees = VisibleTreesRight(tree);
+            int leftTrees = VisibleTreesLeft(tree);
 
-            return false;
+            return topTrees * botTrees * rightTrees * leftTrees;
         }
 
         public int GetNumberOfVisibleTrees()
@@ -66,76 +66,39 @@ namespace _08
             {
                 for (int x = 0; x < XEdge; x++)
                 {
-                    if (IsTreeVisible(map[x, y]))
-                        result++;
+                    int score = GetScore(map[x, y]);
+                    if (score > result)
+                        result = score;
                 }
             }
 
             return result;
         }
 
-        private bool VisibleOnX(Tree tree)
+        private int VisibleTreesTop(Tree tree) => NbOfVisibleTrees(tree, -1, 0);
+        private int VisibleTreesBot(Tree tree) => NbOfVisibleTrees(tree, 1, 0);
+        private int VisibleTreesRight(Tree tree) => NbOfVisibleTrees(tree, 0, 1);
+        private int VisibleTreesLeft(Tree tree) => NbOfVisibleTrees(tree, 0, -1);
+
+
+        private int NbOfVisibleTrees(Tree tree, int deltaX, int deltaY)
         {
-            bool isVisible = true;
+            int startX = tree.X + deltaX;
+            int startY = tree.Y + deltaY;
+            int result = 0;
 
-            for (int x = tree.X - 1; x >= 0; x--)
+            while (startX >= 0 && startX < XEdge && startY >= 0 && startY < YEdge)
             {
-                int heightToTest = map[x, tree.Y].Height;
-                if (heightToTest >= tree.Height)
-                {
-                    isVisible = false;
+                result ++;
+
+                if (map[startX, startY].Height >= tree.Height)
                     break;
-                }
+
+                startX += deltaX;
+                startY += deltaY;
             }
 
-            if (isVisible)
-                return isVisible;
-
-            isVisible = true;
-
-            for (int x = tree.X + 1; x < XEdge; x++)
-            {
-                int heightToTest = map[x, tree.Y].Height;
-                if (heightToTest >= tree.Height)
-                {
-                    isVisible = false;
-                    break;
-                }
-            }
-
-            return isVisible;
-        }
-
-        private bool VisibleOnY(Tree tree)
-        {
-            bool isVisible = true;
-
-            for (int y = tree.Y - 1; y >= 0; y--)
-            {
-                int heightToTest = map[tree.X, y].Height;
-                if (heightToTest >= tree.Height)
-                {
-                    isVisible = false;
-                    break;
-                }
-            }
-
-            if (isVisible)
-                return isVisible;
-
-            isVisible = true;
-
-            for (int y = tree.Y + 1; y < YEdge; y++)
-            {
-                int heightToTest = map[tree.X, y].Height;
-                if (heightToTest >= tree.Height)
-                {
-                    isVisible = false;
-                    break;
-                }
-            }
-
-            return isVisible;
+            return result;
         }
     }
 }
