@@ -1,5 +1,4 @@
-﻿
-using _08;
+﻿using _08;
 
 string[] input = File.ReadAllLines("../../../input.txt");
 

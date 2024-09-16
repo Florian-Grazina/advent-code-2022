@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\fgrazina.PPI\\Source\\repos\\Florian-Grazina\\advent-2022\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{23B5EFAA-536D-42E9-BF87-E53D3D58FBFF}|08\\08.csproj|c:\\users\\fgrazina.ppi\\source\\repos\\florian-grazina\\advent-2022\\08\\input.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{23B5EFAA-536D-42E9-BF87-E53D3D58FBFF}|08\\08.csproj|solutionrelative:08\\input.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{6CFB22C3-2F68-4BB1-86D2-19A6850969B3}|09\\09.csproj|c:\\users\\fgrazina.ppi\\source\\repos\\florian-grazina\\advent-2022\\09\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CFB22C3-2F68-4BB1-86D2-19A6850969B3}|09\\09.csproj|solutionrelative:09\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{23B5EFAA-536D-42E9-BF87-E53D3D58FBFF}|08\\08.csproj|c:\\users\\fgrazina.ppi\\source\\repos\\florian-grazina\\advent-2022\\08\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23B5EFAA-536D-42E9-BF87-E53D3D58FBFF}|08\\08.csproj|solutionrelative:08\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{23B5EFAA-536D-42E9-BF87-E53D3D58FBFF}|08\\08.csproj|c:\\users\\fgrazina.ppi\\source\\repos\\florian-grazina\\advent-2022\\08\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23B5EFAA-536D-42E9-BF87-E53D3D58FBFF}|08\\08.csproj|solutionrelative:08\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6CFB22C3-2F68-4BB1-86D2-19A6850969B3}|09\\09.csproj|c:\\users\\fgrazina.ppi\\source\\repos\\florian-grazina\\advent-2022\\09\\rope.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CFB22C3-2F68-4BB1-86D2-19A6850969B3}|09\\09.csproj|solutionrelative:09\\rope.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,41 +46,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "input.txt",
-              "DocumentMoniker": "C:\\Users\\fgrazina.PPI\\Source\\repos\\Florian-Grazina\\advent-2022\\08\\input.txt",
-              "RelativeDocumentMoniker": "08\\input.txt",
-              "ToolTip": "C:\\Users\\fgrazina.PPI\\Source\\repos\\Florian-Grazina\\advent-2022\\08\\input.txt",
-              "RelativeToolTip": "08\\input.txt",
-              "ViewState": "AQIAADIAAAAAAAAAAAAcwGIAAABjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-09-13T09:51:17.19Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Map.cs",
-              "DocumentMoniker": "C:\\Users\\fgrazina.PPI\\Source\\repos\\Florian-Grazina\\advent-2022\\08\\Map.cs",
-              "RelativeDocumentMoniker": "08\\Map.cs",
-              "ToolTip": "C:\\Users\\fgrazina.PPI\\Source\\repos\\Florian-Grazina\\advent-2022\\08\\Map.cs",
-              "RelativeToolTip": "08\\Map.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAUwEYAAAAnAAAA",
+              "Title": "Rope.cs",
+              "DocumentMoniker": "C:\\Users\\fgrazina.PPI\\Source\\repos\\Florian-Grazina\\advent-2022\\09\\Rope.cs",
+              "RelativeDocumentMoniker": "09\\Rope.cs",
+              "ToolTip": "C:\\Users\\fgrazina.PPI\\Source\\repos\\Florian-Grazina\\advent-2022\\09\\Rope.cs",
+              "RelativeToolTip": "09\\Rope.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T09:22:19.924Z",
+              "WhenOpened": "2024-09-16T09:15:08.29Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\fgrazina.PPI\\Source\\repos\\Florian-Grazina\\advent-2022\\08\\Program.cs",
-              "RelativeDocumentMoniker": "08\\Program.cs",
-              "ToolTip": "C:\\Users\\fgrazina.PPI\\Source\\repos\\Florian-Grazina\\advent-2022\\08\\Program.cs",
-              "RelativeToolTip": "08\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAYAAAA",
+              "DocumentIndex": 0,
+              "Title": "Map.cs",
+              "DocumentMoniker": "C:\\Users\\fgrazina.PPI\\Source\\repos\\Florian-Grazina\\advent-2022\\09\\Map.cs",
+              "RelativeDocumentMoniker": "09\\Map.cs",
+              "ToolTip": "C:\\Users\\fgrazina.PPI\\Source\\repos\\Florian-Grazina\\advent-2022\\09\\Map.cs",
+              "RelativeToolTip": "09\\Map.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAwBgAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T09:20:23.243Z",
+              "WhenOpened": "2024-09-16T09:11:11.304Z",
               "EditorCaption": ""
             }
           ]
