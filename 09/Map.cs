@@ -32,6 +32,7 @@
             {
                 ClearMap();
                 moveService.MoveHead(command, head);
+                moveService.MoveTail(tail, head);
                 UpdateMap();
                 Print();
             }
@@ -41,11 +42,13 @@
         private void ClearMap()
         {
             map[head.PosX, head.PosY] = " . ";
+            map[tail.PosX, tail.PosY] = " . ";
         }
 
         private void UpdateMap()
         {
             map[head.PosX, head.PosY] = " H ";
+            map[tail.PosX, tail.PosY] = " T ";
         }
 
         private void Print()
