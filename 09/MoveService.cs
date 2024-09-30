@@ -10,10 +10,52 @@
                 "D" => MoveDown,
                 "L" => MoveLeft,
                 "R" => MoveRight,
-                _ => throw new ArgumentNullException(nameof(command))
+                _ => throw new ArgumentException(nameof(command))
             };
 
             action(rope);
+        }
+
+        public void MoveTail(Rope tail, Rope head)
+        {
+            if (TailAndHearAreTouching(tail, head))
+                return;
+
+            Direction direction = GetPerpendicularHeadDirection(tail, head);
+
+
+            if (direction != Direction.NONE)
+                Move(tail, direction);
+
+            else
+            {
+                (Direction, Direction) directions = GetOblicHeadDirection(tail, head);
+                Move(tail, directions.Item1);
+                Move(tail, directions.Item2);
+            }
+        }
+
+        public void Move(Rope rope, Direction direction)
+        {
+            switch (direction)
+            {
+                case Direction.UP:
+                    MoveUp(rope);
+                    break;
+                case Direction.DOWN:
+                    MoveDown(rope);
+                    break;
+                case Direction.LEFT:
+                    MoveLeft(rope);
+                    break;
+                case Direction.RIGHT:
+                    MoveRight(rope);
+                    break;
+                case Direction.NONE:
+                    break;
+                default:
+                    throw new ArgumentException(nameof(direction));
+            }
         }
 
         public void MoveUp(Rope rope)
@@ -36,41 +78,6 @@
             rope.PosX++;
         }
 
-        public void MoveTail(Rope tail, Rope head)
-        {
-            if (TailAndHearAreTouching(tail, head))
-                return;
-
-            Direction direction = GetPerpendicularHeadDirection(tail, head);
-
-            switch (direction)
-            {
-                case Direction.UP:
-                    MoveUp(tail);
-                    break;
-                case Direction.DOWN:
-                    MoveDown(tail);
-                    break;
-                case Direction.LEFT:
-                    MoveLeft(tail);
-                    break;
-                case Direction.RIGHT:
-                    MoveRight(tail);
-                    break;
-                case Direction.NONE:
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
-
-            if(direction == Direction.NONE)
-            {
-                if()
-            }
-        }
-
-
-
         private bool TailAndHearAreTouching(Rope tail, Rope head)
         {
             int tailX = tail.PosX;
@@ -78,7 +85,7 @@
             int headX = head.PosX;
             int headY = head.PosY;
 
-            if (tailX == headX && tailY == tailX
+            if (tailX == headX && tailY == headY
                 || GetDistance(tailX, headX) <= 1 && GetDistance(tailY, headY) <= 1)
                 return true;
 
@@ -114,28 +121,21 @@
             return Direction.NONE;
         }
 
-        private Direction GetOblicHeadDirection(Rope tail, Rope head)
+        private (Direction, Direction) GetOblicHeadDirection (Rope tail, Rope head)
         {
-            int tailX = tail.PosX;
-            int tailY = tail.PosY;
-            int headX = head.PosX;
-            int headY = head.PosY;
+            (Direction, Direction) directions = new();
 
-            if (tailX == headX)
-            {
-                if (tailY > headY)
-                    return Direction.UP;
-                else
-                    return Direction.DOWN;
-            }
-            else if (tailY == headY)
-            {
-                if (tailX > headX)
-                    return Direction.LEFT;
-                else
-                    return Direction.RIGHT;
-            }
-            return Direction.NONE;
+            if (tail.PosX < head.PosX)
+                directions.Item1 = Direction.RIGHT;
+            else
+                directions.Item1 = Direction.LEFT;
+
+            if(tail.PosY < head.PosY)
+                directions.Item2 = Direction.DOWN;
+            else
+                directions.Item2 = Direction.UP;
+
+            return directions;
         }
     }
 }

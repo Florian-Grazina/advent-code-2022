@@ -6,7 +6,7 @@
         private readonly Rope tail;
         private readonly MoveService moveService;
         private readonly string[,] map;
-
+        private readonly List<PosRecord> results = [];
 
         public Map(int x, int y)
         {
@@ -14,15 +14,17 @@
             tail = new(x, y);
 
             moveService = new();
-            map = new string[6, 5];
-            FilleMap();
-
-            UpdateMap();
-            Print();
+            map = new string[x*2, y*2];
+            //FilleMap();
+            AddResult();
+            //UpdateMap();
+            //Print();
         }
 
         public void Move(string input)
         {
+            AddResult();
+
             string[] splitInput = input.Split(' ');
 
             string command = splitInput[0];
@@ -30,15 +32,27 @@
 
             for (int i = 0; i < loop; i++)
             {
-                ClearMap();
+                //ClearMap();
                 moveService.MoveHead(command, head);
                 moveService.MoveTail(tail, head);
-                UpdateMap();
-                Print();
+                AddResult();
+                //UpdateMap();
+                //Print();
             }
+            AddResult();
         }
 
+        public int GetResults() => results.Count;
+
         #region private methods
+        private void AddResult()
+        {
+            PosRecord record = new(tail.PosX, tail.PosY);
+
+            if (!results.Contains(record))
+                results.Add(record);
+        }
+
         private void ClearMap()
         {
             map[head.PosX, head.PosY] = " . ";
